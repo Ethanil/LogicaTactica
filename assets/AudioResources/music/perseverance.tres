@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://kh5cumrwhdfv"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_oysqt"]
+[ext_resource type="AudioStream" uid="uid://b82wdwy1juefl" path="res://assets/Sounds/music/perseverance.mp3" id="2_s3ss3"]
+
+[resource]
+script = ExtResource("1_oysqt")
+title = "Perseverance"
+artist = "Trevor Lentz"
+sound = ExtResource("2_s3ss3")
+link = "https://opengameart.org/content/perseverance"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

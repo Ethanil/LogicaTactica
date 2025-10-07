@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://b3omebd1cfwj5"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_dkoje"]
+[ext_resource type="AudioStream" uid="uid://dtvy820gxnr1r" path="res://assets/Sounds/cc0/qubodupImpact/qubodupImpactWood.ogg" id="2_dkoje"]
+
+[resource]
+script = ExtResource("1_dkoje")
+title = "Blunt Hit"
+artist = "qubodup"
+sound = ExtResource("2_dkoje")
+link = "https://opengameart.org/content/impact"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

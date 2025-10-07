@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://lx5pg4r0okwi"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_4g63f"]
+[ext_resource type="AudioStream" uid="uid://bu38tn8ulxa7x" path="res://assets/Sounds/cc0/80-CC0-RPG-SFX/item_wood_02.ogg" id="2_4g63f"]
+
+[resource]
+script = ExtResource("1_4g63f")
+title = "Item Wood 2"
+artist = "rubberduck"
+sound = ExtResource("2_4g63f")
+link = "https://opengameart.org/content/80-cc0-rpg-sfx"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

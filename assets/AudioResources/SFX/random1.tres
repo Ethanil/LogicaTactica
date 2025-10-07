@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://6720fhqbplxm"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_1rpk1"]
+[ext_resource type="AudioStream" uid="uid://c6o7sv7hvyukd" path="res://assets/Sounds/cc0/rpg_sound_pack/RPG Sound Pack/misc/random1.wav" id="2_1rpk1"]
+
+[resource]
+script = ExtResource("1_1rpk1")
+title = "Random 1"
+artist = "Reemax"
+sound = ExtResource("2_1rpk1")
+link = "https://opengameart.org/content/rpg-sound-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

@@ -1,0 +1,142 @@
+[gd_scene load_steps=14 format=3 uid="uid://bu1527q15cbrl"]
+
+[ext_resource type="Script" uid="uid://dtikuabjt2g2v" path="res://scripts/Creatures/attributes_information_element.gd" id="1_a87yf"]
+[ext_resource type="Texture2D" uid="uid://bsw7waa4dwinc" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/panel_brown_damaged_dark.png" id="2_1lrqw"]
+[ext_resource type="Texture2D" uid="uid://bjt646slqtyak" path="res://assets/UI/ccby/Fliegend.png" id="3_a87yf"]
+[ext_resource type="Texture2D" uid="uid://bnmr3747oht0s" path="res://assets/UI/ccby/Humanoid.png" id="4_215qa"]
+[ext_resource type="Texture2D" uid="uid://3l2uw7qy7nh" path="res://assets/UI/ccby/Insekt.png" id="5_gqmre"]
+[ext_resource type="Texture2D" uid="uid://cqhxutltjruvv" path="res://assets/UI/ccby/Legendär.png" id="6_loe5w"]
+[ext_resource type="Texture2D" uid="uid://c32ouqjrtocyd" path="res://assets/UI/ccby/Magical.png" id="7_kw0pb"]
+[ext_resource type="Texture2D" uid="uid://g4030qgrp4j8" path="res://assets/UI/ccby/Mechanisch.png" id="8_ietsp"]
+[ext_resource type="Texture2D" uid="uid://prjafs5jc437" path="res://assets/UI/ccby/Mythisch.png" id="9_c6quy"]
+[ext_resource type="Texture2D" uid="uid://bj6mm8wbfd53o" path="res://assets/UI/ccby/Tier.png" id="10_1huog"]
+[ext_resource type="Texture2D" uid="uid://b4ds2sc754yvh" path="res://assets/UI/ccby/Untot.png" id="11_ajdox"]
+[ext_resource type="Texture2D" uid="uid://c8yuk7ywt8f8o" path="res://assets/UI/ccby/Wasserlebewesen.png" id="12_tluhm"]
+[ext_resource type="Texture2D" uid="uid://cacxtav11etm0" path="res://assets/UI/ccby/Pflanze.png" id="13_j6f0y"]
+
+[node name="AttributesInformationElement" type="Control"]
+custom_minimum_size = Vector2(400, 90)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 90.0
+script = ExtResource("1_a87yf")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1lrqw")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 41
+patch_margin_top = 50
+patch_margin_right = 37
+patch_margin_bottom = 41
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.134
+anchor_right = 0.969
+anchor_bottom = 0.877
+
+[node name="Flying" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_a87yf")
+expand_mode = 1
+
+[node name="Humanoid" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_215qa")
+expand_mode = 1
+
+[node name="Insect" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_gqmre")
+expand_mode = 1
+
+[node name="Legendary" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("6_loe5w")
+expand_mode = 1
+
+[node name="Magical" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_kw0pb")
+expand_mode = 1
+
+[node name="Mechanical" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("8_ietsp")
+expand_mode = 1
+
+[node name="Mythical" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("9_c6quy")
+expand_mode = 1
+
+[node name="Animal" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("10_1huog")
+expand_mode = 1
+
+[node name="Undead" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("11_ajdox")
+expand_mode = 1
+
+[node name="Aquatic" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("12_tluhm")
+expand_mode = 1
+
+[node name="Plant" type="TextureRect" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("13_j6f0y")
+expand_mode = 1
+
+[node name="AttributeName" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 33
+text = "Wasserlebewesen"
+horizontal_alignment = 1
+vertical_alignment = 1

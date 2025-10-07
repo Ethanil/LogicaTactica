@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://cvh7u3luewaef"]
+
+[ext_resource type="Resource" uid="uid://c1af0yfylxkq7" path="res://assets/AudioResources/SFX/Sword.tres" id="1_kfowb"]
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="2_kfowb"]
+[ext_resource type="SpriteFrames" uid="uid://b2h87ojxjkogl" path="res://assets/animatedSprites/minotaur.tres" id="3_snmnw"]
+
+[resource]
+script = ExtResource("2_kfowb")
+name = "Minotaurus"
+attack_value = 7
+health = 30
+defense = 1
+damaged_animations = Array[String](["damaged1", "damaged2"])
+attack_animations = Array[String](["attack1", "attack2", "attack3"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_kfowb")
+attack_sound_delay = 0.1
+sprite_y_offset = 16.0
+attributes = Array[int]([9, 12, 0, 4])
+attack_pattern = 2
+sprite_Frames = ExtResource("3_snmnw")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

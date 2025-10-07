@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://y2asjdn2rw7r"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_m3vat"]
+[ext_resource type="AudioStream" uid="uid://c2sa17v8bpxlr" path="res://assets/Sounds/music/Mountain Climb.mp3" id="2_83fw6"]
+
+[resource]
+script = ExtResource("1_m3vat")
+title = "Mountain Climb"
+artist = "Trevor Lentz"
+sound = ExtResource("2_83fw6")
+link = "https://opengameart.org/content/7-days-of-sorcery-full-album"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

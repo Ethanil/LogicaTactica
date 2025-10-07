@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://csqgk8058bp86"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_dlyat"]
+[ext_resource type="AudioStream" uid="uid://bmdw874ugr57y" path="res://assets/Sounds/cc0/Meow.ogg" id="2_dlyat"]
+
+[resource]
+script = ExtResource("1_dlyat")
+title = "Meow"
+artist = "IgnasD"
+sound = ExtResource("2_dlyat")
+link = "https://opengameart.org/content/meow"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

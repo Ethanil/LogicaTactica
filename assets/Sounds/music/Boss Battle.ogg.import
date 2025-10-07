@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://co1cly7s5ycdk"
+path="res://.godot/imported/Boss Battle.ogg-2d447daf0055ba68bd415cff0e5fd6ed.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Sounds/music/Boss Battle.ogg"
+dest_files=["res://.godot/imported/Boss Battle.ogg-2d447daf0055ba68bd415cff0e5fd6ed.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

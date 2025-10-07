@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://bmovqrnhnywx"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_ujpmg"]
+[ext_resource type="Resource" uid="uid://c077toswcj4ys" path="res://assets/AudioResources/SFX/Eat.tres" id="2_cpvqx"]
+[ext_resource type="SpriteFrames" uid="uid://78nk16kdgp" path="res://assets/animatedSprites/brain_mole.tres" id="2_mba5u"]
+
+[resource]
+script = ExtResource("1_ujpmg")
+name = "Gehirnmaulwurf"
+attack_value = 5
+health = 10
+defense = 1
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("2_cpvqx")
+attack_sound_delay = 0.0
+sprite_y_offset = 0.0
+attributes = Array[int]([2, 4, 5, 11, 1])
+attack_pattern = 0
+sprite_Frames = ExtResource("2_mba5u")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

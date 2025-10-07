@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://d3wv8amvasb0g"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_6658g"]
+[ext_resource type="AudioStream" uid="uid://brf2svmo3kxp4" path="res://assets/Sounds/music/remixabetterworld.mp3" id="2_r6w80"]
+
+[resource]
+script = ExtResource("1_6658g")
+title = "A Better World (Remix)"
+artist = "Trevor Lentz"
+sound = ExtResource("2_r6w80")
+link = "https://opengameart.org/content/a-better-world-remix"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

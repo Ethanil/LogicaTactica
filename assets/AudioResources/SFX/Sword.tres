@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://c1af0yfylxkq7"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_l1xn4"]
+[ext_resource type="AudioStream" uid="uid://8c2lg1sn0131" path="res://assets/Sounds/cc0/rpg_sound_pack/RPG Sound Pack/battle/sword-unsheathe3.wav" id="2_l1xn4"]
+
+[resource]
+script = ExtResource("1_l1xn4")
+title = "Sword"
+artist = "artisticdude"
+sound = ExtResource("2_l1xn4")
+link = "https://opengameart.org/content/rpg-sound-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

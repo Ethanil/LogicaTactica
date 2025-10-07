@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://jbxad3n2crjk"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_0qt6e"]
+[ext_resource type="Resource" uid="uid://b3omebd1cfwj5" path="res://assets/AudioResources/SFX/BluntHit.tres" id="1_6hh81"]
+[ext_resource type="SpriteFrames" uid="uid://42smgkl5xpi5" path="res://assets/animatedSprites/gladiator.tres" id="2_xmw64"]
+
+[resource]
+script = ExtResource("1_0qt6e")
+name = "Gladiator"
+attack_value = 2
+health = 3
+defense = 5
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_6hh81")
+attack_sound_delay = 0.2
+sprite_y_offset = 16.0
+attributes = Array[int]([9, 11])
+attack_pattern = 0
+sprite_Frames = ExtResource("2_xmw64")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

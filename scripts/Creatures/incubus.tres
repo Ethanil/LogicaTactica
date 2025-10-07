@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://bt6mogvekrs5h"]
+
+[ext_resource type="Resource" uid="uid://1wpgbmhtqbdg" path="res://assets/AudioResources/SFX/Whip.tres" id="1_0qqfc"]
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="2_0qqfc"]
+[ext_resource type="SpriteFrames" uid="uid://b73kkpu3x6ogk" path="res://assets/animatedSprites/incubus.tres" id="3_vr4py"]
+
+[resource]
+script = ExtResource("2_0qqfc")
+name = "Incubus"
+attack_value = 4
+health = 3
+defense = 5
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_0qqfc")
+attack_sound_delay = 0.0
+sprite_y_offset = 0.0
+attributes = Array[int]([2, 9, 4, 11])
+attack_pattern = 0
+sprite_Frames = ExtResource("3_vr4py")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://wpo3sd46h730"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_apjvi"]
+[ext_resource type="AudioStream" uid="uid://b1ujlmpexeyx6" path="res://assets/Sounds/cc0/rpg_sound_pack/RPG Sound Pack/misc/random6.wav" id="2_apjvi"]
+
+[resource]
+script = ExtResource("1_apjvi")
+title = "Random 6"
+artist = "artisticdude"
+sound = ExtResource("2_apjvi")
+link = "https://opengameart.org/content/rpg-sound-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

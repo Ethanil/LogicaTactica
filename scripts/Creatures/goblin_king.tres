@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://daufjiekhlc4t"]
+
+[ext_resource type="Resource" uid="uid://cn0har8brindq" path="res://assets/AudioResources/SFX/Fall.tres" id="1_u2dwe"]
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="2_u2dwe"]
+[ext_resource type="SpriteFrames" uid="uid://xm5umi2jj6nq" path="res://assets/animatedSprites/goblin_king.tres" id="3_sdjdd"]
+
+[resource]
+script = ExtResource("2_u2dwe")
+name = "Goblin King"
+attack_value = 4
+health = 70
+defense = 4
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_u2dwe")
+attack_sound_delay = 0.8
+sprite_y_offset = 0.0
+attributes = Array[int]([9, 12])
+attack_pattern = 3
+sprite_Frames = ExtResource("3_sdjdd")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

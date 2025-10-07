@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://3o38mrw8sbv8"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_ut2w4"]
+[ext_resource type="AudioStream" uid="uid://tsjanvkjfiaj" path="res://assets/Sounds/music/Swingin Tavern.mp3" id="2_ob1tt"]
+
+[resource]
+script = ExtResource("1_ut2w4")
+title = "Swinging Tavern"
+artist = "Trevor Lentz"
+sound = ExtResource("2_ob1tt")
+link = "https://opengameart.org/content/7-days-of-sorcery-full-album"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

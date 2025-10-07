@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://ccpgim64satu1"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_sqbxf"]
+[ext_resource type="Resource" uid="uid://7qh12rv35seq" path="res://assets/AudioResources/SFX/Spell2.tres" id="1_xbsnt"]
+[ext_resource type="SpriteFrames" uid="uid://cf7yxxf5hvtio" path="res://assets/animatedSprites/necromancer.tres" id="2_1x4fk"]
+
+[resource]
+script = ExtResource("1_sqbxf")
+name = "Nekromant"
+attack_value = 5
+health = 7
+defense = 2
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_xbsnt")
+attack_sound_delay = 0.3
+sprite_y_offset = 16.0
+attributes = Array[int]([2, 9, 11])
+attack_pattern = 1
+sprite_Frames = ExtResource("2_1x4fk")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

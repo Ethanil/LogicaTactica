@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://wr11h62qhal6"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_141jx"]
+[ext_resource type="AudioStream" uid="uid://daikdn58u6l60" path="res://assets/Sounds/ccbysa/spell1_0.wav" id="2_141jx"]
+
+[resource]
+script = ExtResource("1_141jx")
+title = "Spell1"
+artist = "Bart Kelsey"
+sound = ExtResource("2_141jx")
+link = "https://opengameart.org/content/spell-1"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

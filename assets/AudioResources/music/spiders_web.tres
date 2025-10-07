@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://ddtcvea0xgxho"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_r0eo4"]
+[ext_resource type="AudioStream" uid="uid://bwb2o5rixilw0" path="res://assets/Sounds/music/spidersweb.mp3" id="2_2hwnk"]
+
+[resource]
+script = ExtResource("1_r0eo4")
+title = "Spider's Web"
+artist = "Trevor Lentz"
+sound = ExtResource("2_2hwnk")
+link = "https://opengameart.org/content/spiders-web"
+license = 2
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

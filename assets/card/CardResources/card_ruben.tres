@@ -1,0 +1,240 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=52 format=3 uid="uid://bbo6vcrw0fw7f"]
+
+[ext_resource type="Script" uid="uid://cns7uvxoxvunv" path="res://scripts/Predicate/PredicateFunc.gd" id="1_1x3hu"]
+[ext_resource type="Script" uid="uid://bjvd42x8q1r8n" path="res://scripts/Predicate/Var.gd" id="1_7maqn"]
+[ext_resource type="Script" uid="uid://c4qutl8ikovyn" path="res://assets/card/CardResources/card_data.gd" id="1_c10ms"]
+[ext_resource type="Script" uid="uid://badwjne424w7m" path="res://scripts/Predicate/GreaterThan.gd" id="2_1kyam"]
+[ext_resource type="Script" uid="uid://0bm3soaflyhw" path="res://scripts/Predicate/IntConst.gd" id="3_m0nkm"]
+[ext_resource type="Script" uid="uid://dk8ss2bfhtwkf" path="res://scripts/Predicate/Expr.gd" id="3_skix5"]
+[ext_resource type="Script" uid="uid://8dhp2mx0e6ej" path="res://scripts/Predicate/ForAll.gd" id="4_7maqn"]
+[ext_resource type="Script" uid="uid://bfkb7j65d8qdb" path="res://scripts/Predicate/And.gd" id="5_m0nkm"]
+[ext_resource type="Script" uid="uid://c30ycsv4otbw3" path="res://scripts/Predicate/LessThan.gd" id="7_yu1vn"]
+[ext_resource type="Script" uid="uid://deu1r6x4ds5e" path="res://scripts/Predicate/StringConst.gd" id="8_yu1vn"]
+[ext_resource type="Script" uid="uid://bhifsn6q7cm58" path="res://scripts/Predicate/Union.gd" id="9_tcfqw"]
+[ext_resource type="Script" uid="uid://chu1e88vwevke" path="res://scripts/Predicate/Assign.gd" id="10_80rc7"]
+[ext_resource type="Script" uid="uid://dxdn3tiri275n" path="res://scripts/Predicate/Plus.gd" id="11_5m8dh"]
+[ext_resource type="Script" uid="uid://dj77hkbkxfca2" path="res://scripts/Predicate/Implies.gd" id="15_1yfv5"]
+
+[sub_resource type="Resource" id="Resource_6debr"]
+script = ExtResource("1_7maqn")
+name = "x"
+metadata/_custom_type_script = "uid://bjvd42x8q1r8n"
+
+[sub_resource type="Resource" id="Resource_jynh3"]
+script = ExtResource("1_1x3hu")
+name = "Angriff"
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_6debr")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_scix7"]
+script = ExtResource("3_m0nkm")
+value = 5
+metadata/_custom_type_script = "uid://0bm3soaflyhw"
+
+[sub_resource type="Resource" id="Resource_xh4a4"]
+script = ExtResource("2_1kyam")
+left = SubResource("Resource_jynh3")
+right = SubResource("Resource_scix7")
+metadata/_custom_type_script = "uid://badwjne424w7m"
+
+[sub_resource type="Resource" id="Resource_oqmbw"]
+script = ExtResource("1_1x3hu")
+name = "Kreaturen"
+args = Array[ExtResource("3_skix5")]([])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_xdalw"]
+script = ExtResource("4_7maqn")
+varname = "x"
+domain = SubResource("Resource_oqmbw")
+body = SubResource("Resource_xh4a4")
+metadata/_custom_type_script = "uid://8dhp2mx0e6ej"
+
+[sub_resource type="Resource" id="Resource_c2hsy"]
+script = ExtResource("1_1x3hu")
+name = "Verbündete"
+args = Array[ExtResource("3_skix5")]([])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_dm6ei"]
+script = ExtResource("1_1x3hu")
+name = "Anzahl"
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_c2hsy")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_d5l2b"]
+script = ExtResource("3_m0nkm")
+value = 5
+metadata/_custom_type_script = "uid://0bm3soaflyhw"
+
+[sub_resource type="Resource" id="Resource_f4xl8"]
+script = ExtResource("7_yu1vn")
+left = SubResource("Resource_dm6ei")
+right = SubResource("Resource_d5l2b")
+metadata/_custom_type_script = "uid://c30ycsv4otbw3"
+
+[sub_resource type="Resource" id="Resource_1yfv5"]
+script = ExtResource("5_m0nkm")
+left = SubResource("Resource_xdalw")
+right = SubResource("Resource_f4xl8")
+metadata/_custom_type_script = "uid://bfkb7j65d8qdb"
+
+[sub_resource type="Resource" id="Resource_5m8dh"]
+script = ExtResource("8_yu1vn")
+value = "Roter Panda"
+metadata/_custom_type_script = "uid://deu1r6x4ds5e"
+
+[sub_resource type="Resource" id="Resource_4y1qg"]
+script = ExtResource("1_1x3hu")
+name = ""
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_5m8dh")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_1df5x"]
+script = ExtResource("1_1x3hu")
+name = "Verbündete"
+args = Array[ExtResource("3_skix5")]([])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_pbdru"]
+script = ExtResource("9_tcfqw")
+left = SubResource("Resource_4y1qg")
+right = SubResource("Resource_1df5x")
+metadata/_custom_type_script = "uid://bhifsn6q7cm58"
+
+[sub_resource type="Resource" id="Resource_u6ev6"]
+script = ExtResource("1_1x3hu")
+name = "Verbündete"
+args = Array[ExtResource("3_skix5")]([])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_276hl"]
+script = ExtResource("10_80rc7")
+target = SubResource("Resource_u6ev6")
+expr = SubResource("Resource_pbdru")
+metadata/_custom_type_script = "uid://chu1e88vwevke"
+
+[sub_resource type="Resource" id="Resource_yepyn"]
+script = ExtResource("1_7maqn")
+name = "x"
+metadata/_custom_type_script = "uid://bjvd42x8q1r8n"
+
+[sub_resource type="Resource" id="Resource_3xhvh"]
+script = ExtResource("1_1x3hu")
+name = "Angriff"
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_yepyn")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_q0max"]
+script = ExtResource("3_m0nkm")
+value = 2
+metadata/_custom_type_script = "uid://0bm3soaflyhw"
+
+[sub_resource type="Resource" id="Resource_pt4rs"]
+script = ExtResource("2_1kyam")
+left = SubResource("Resource_3xhvh")
+right = SubResource("Resource_q0max")
+metadata/_custom_type_script = "uid://badwjne424w7m"
+
+[sub_resource type="Resource" id="Resource_aut7i"]
+script = ExtResource("1_1x3hu")
+name = "Kreaturen"
+args = Array[ExtResource("3_skix5")]([])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_5mcjl"]
+script = ExtResource("4_7maqn")
+varname = "x"
+domain = SubResource("Resource_aut7i")
+body = SubResource("Resource_pt4rs")
+metadata/_custom_type_script = "uid://8dhp2mx0e6ej"
+
+[sub_resource type="Resource" id="Resource_of7o7"]
+script = ExtResource("1_7maqn")
+name = "x"
+metadata/_custom_type_script = "uid://bjvd42x8q1r8n"
+
+[sub_resource type="Resource" id="Resource_6ovlt"]
+script = ExtResource("1_1x3hu")
+name = "Angriff"
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_of7o7")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_2fgfq"]
+script = ExtResource("3_m0nkm")
+value = 2
+metadata/_custom_type_script = "uid://0bm3soaflyhw"
+
+[sub_resource type="Resource" id="Resource_3yw2r"]
+script = ExtResource("11_5m8dh")
+left = SubResource("Resource_6ovlt")
+right = SubResource("Resource_2fgfq")
+metadata/_custom_type_script = "uid://dxdn3tiri275n"
+
+[sub_resource type="Resource" id="Resource_i57rb"]
+script = ExtResource("1_7maqn")
+name = "x"
+metadata/_custom_type_script = "uid://bjvd42x8q1r8n"
+
+[sub_resource type="Resource" id="Resource_gw7e6"]
+script = ExtResource("1_1x3hu")
+name = "Angriff"
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_i57rb")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_wqm6j"]
+script = ExtResource("10_80rc7")
+target = SubResource("Resource_gw7e6")
+expr = SubResource("Resource_3yw2r")
+metadata/_custom_type_script = "uid://chu1e88vwevke"
+
+[sub_resource type="Resource" id="Resource_esxxd"]
+script = ExtResource("1_7maqn")
+name = "x"
+metadata/_custom_type_script = "uid://bjvd42x8q1r8n"
+
+[sub_resource type="Resource" id="Resource_c3cee"]
+script = ExtResource("1_1x3hu")
+name = "Angriff"
+args = Array[ExtResource("3_skix5")]([SubResource("Resource_esxxd")])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_emvpw"]
+script = ExtResource("3_m0nkm")
+value = 5
+metadata/_custom_type_script = "uid://0bm3soaflyhw"
+
+[sub_resource type="Resource" id="Resource_3yt6b"]
+script = ExtResource("2_1kyam")
+left = SubResource("Resource_c3cee")
+right = SubResource("Resource_emvpw")
+metadata/_custom_type_script = "uid://badwjne424w7m"
+
+[sub_resource type="Resource" id="Resource_76r0t"]
+script = ExtResource("15_1yfv5")
+premise = SubResource("Resource_3yt6b")
+conclusion = SubResource("Resource_wqm6j")
+metadata/_custom_type_script = "uid://dj77hkbkxfca2"
+
+[sub_resource type="Resource" id="Resource_5uoxx"]
+script = ExtResource("1_1x3hu")
+name = "Kreaturen"
+args = Array[ExtResource("3_skix5")]([])
+metadata/_custom_type_script = "uid://cns7uvxoxvunv"
+
+[sub_resource type="Resource" id="Resource_rcuhg"]
+script = ExtResource("4_7maqn")
+varname = ""
+domain = SubResource("Resource_5uoxx")
+body = SubResource("Resource_76r0t")
+metadata/_custom_type_script = "uid://8dhp2mx0e6ej"
+
+[resource]
+script = ExtResource("1_c10ms")
+creature_cond_expr = SubResource("Resource_1yfv5")
+creature_effect_expr = SubResource("Resource_276hl")
+spell_cond_expr = SubResource("Resource_5mcjl")
+spell_effect_expr = SubResource("Resource_rcuhg")
+card_type = 0
+amount_of_repetitions = 2
+metadata/_custom_type_script = "uid://c4qutl8ikovyn"

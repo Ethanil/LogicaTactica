@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb2abahy4s27d"
+path="res://.godot/imported/Kirill R. - 16bit Bee.mp3-3aa05e5e745e6beb5578d59edbf8d1fb.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/music/Kirill R. - 16bit Bee.mp3"
+dest_files=["res://.godot/imported/Kirill R. - 16bit Bee.mp3-3aa05e5e745e6beb5578d59edbf8d1fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

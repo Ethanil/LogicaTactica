@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://b7iex4j3mjfjl"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_dxdjj"]
+[ext_resource type="AudioStream" uid="uid://co1cly7s5ycdk" path="res://assets/Sounds/music/Boss Battle.ogg" id="2_04qp2"]
+
+[resource]
+script = ExtResource("1_dxdjj")
+title = "Boss Battle"
+artist = "3xBlast"
+sound = ExtResource("2_04qp2")
+link = "https://opengameart.org/content/16bit-boss-battle-loop"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqgm5uyg0ri50"]
+
+[ext_resource type="Script" uid="uid://dw3sn32lsrdue" path="res://scripts/Creatures/creature_information_element.gd" id="1_k4pf7"]
+[ext_resource type="Texture2D" uid="uid://bsw7waa4dwinc" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/panel_brown_damaged_dark.png" id="2_bmr7g"]
+
+[node name="CreatureInformationElement" type="Control"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 80.0
+script = ExtResource("1_k4pf7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bmr7g")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 41
+patch_margin_top = 50
+patch_margin_right = 37
+patch_margin_bottom = 41
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.04
+anchor_right = 0.96
+anchor_bottom = 0.96
+offset_top = 7.0
+
+[node name="SpriteContainer" type="Container" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(184.465, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="CreatureName" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 56
+text = "Testname"
+horizontal_alignment = 1
+vertical_alignment = 1

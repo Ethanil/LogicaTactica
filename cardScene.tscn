@@ -1,0 +1,163 @@
+[gd_scene load_steps=10 format=3 uid="uid://ffomkmu71f51"]
+
+[ext_resource type="Script" uid="uid://c5kue50wk5cxu" path="res://scripts/Main/card_controller.gd" id="1_6gg5k"]
+[ext_resource type="Texture2D" uid="uid://byj5xhfop0em2" path="res://assets/card/card_background_pure.png" id="2_0fodc"]
+[ext_resource type="Script" uid="uid://bd5er6h0qw22m" path="res://scripts/UI/Latex.gd" id="2_8vm5s"]
+[ext_resource type="Texture2D" uid="uid://ctwmk0ryaox54" path="res://assets/UI/creature_texture.tres" id="3_0fodc"]
+[ext_resource type="Texture2D" uid="uid://buhpqwgyslwp5" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/button_grey.png" id="4_1drx5"]
+[ext_resource type="Texture2D" uid="uid://dqf4nv75jytlv" path="res://assets/UI/button_blueihs.png" id="4_u6xnn"]
+[ext_resource type="Texture2D" uid="uid://nofa1scoy4c5" path="res://assets/UI/banner_hanging_blue.png" id="6_t6wnb"]
+[ext_resource type="Texture2D" uid="uid://cnq7w46u53lvt" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/banner_hanging.png" id="6_u6xnn"]
+[ext_resource type="Texture2D" uid="uid://b4242xojtcy7u" path="res://assets/UI/spell_texture.tres" id="7_t6wnb"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(312.5, 437.5)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 312.5
+offset_bottom = 437.5
+size_flags_horizontal = 4
+script = ExtResource("1_6gg5k")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0fodc")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 210)
+layout_mode = 2
+texture = ExtResource("3_0fodc")
+patch_margin_left = 54
+patch_margin_top = 45
+patch_margin_right = 57
+patch_margin_bottom = 53
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="TextureRect/VBoxContainer/NinePatchRect"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 23.0
+offset_right = 280.0
+offset_bottom = 88.0
+texture = ExtResource("4_u6xnn")
+region_rect = Rect2(0, 0, 96, 48)
+patch_margin_left = 10
+patch_margin_top = 9
+patch_margin_right = 10
+patch_margin_bottom = 9
+
+[node name="CreatureCondition" type="Control" parent="TextureRect/VBoxContainer/NinePatchRect/NinePatchRect3"]
+unique_name_in_owner = true
+physics_interpolation_mode = 0
+layout_mode = 1
+anchor_left = 0.031
+anchor_top = 0.119
+anchor_right = 0.969
+anchor_bottom = 0.875
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("2_8vm5s")
+metadata/_custom_type_script = "uid://bd5er6h0qw22m"
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="TextureRect/VBoxContainer/NinePatchRect"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 84.0
+offset_right = 276.0
+offset_bottom = 208.0
+texture = ExtResource("6_t6wnb")
+region_rect = Rect2(0, 0, 512, 128)
+patch_margin_left = 31
+patch_margin_top = 38
+patch_margin_right = 30
+patch_margin_bottom = 45
+
+[node name="CreatureEffect" type="Control" parent="TextureRect/VBoxContainer/NinePatchRect/NinePatchRect4"]
+unique_name_in_owner = true
+physics_interpolation_mode = 0
+layout_mode = 1
+anchor_left = 0.092
+anchor_top = 0.297
+anchor_right = 0.907
+anchor_bottom = 0.713
+mouse_filter = 1
+script = ExtResource("2_8vm5s")
+metadata/_custom_type_script = "uid://bd5er6h0qw22m"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="TextureRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 210)
+layout_mode = 2
+texture = ExtResource("7_t6wnb")
+patch_margin_left = 45
+patch_margin_top = 53
+patch_margin_right = 41
+patch_margin_bottom = 45
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="TextureRect/VBoxContainer/NinePatchRect2"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 281.0
+offset_bottom = 87.0
+texture = ExtResource("4_1drx5")
+region_rect = Rect2(0, 0, 96, 48)
+patch_margin_left = 10
+patch_margin_top = 9
+patch_margin_right = 10
+patch_margin_bottom = 9
+
+[node name="SpellCondition" type="Control" parent="TextureRect/VBoxContainer/NinePatchRect2/NinePatchRect3"]
+unique_name_in_owner = true
+physics_interpolation_mode = 0
+layout_mode = 1
+anchor_left = 0.031
+anchor_top = 0.127
+anchor_right = 0.969
+anchor_bottom = 0.877
+mouse_filter = 1
+script = ExtResource("2_8vm5s")
+metadata/_custom_type_script = "uid://bd5er6h0qw22m"
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="TextureRect/VBoxContainer/NinePatchRect2"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 84.0
+offset_right = 279.0
+offset_bottom = 208.0
+texture = ExtResource("6_u6xnn")
+region_rect = Rect2(0, 0, 512, 128)
+patch_margin_left = 31
+patch_margin_top = 38
+patch_margin_right = 30
+patch_margin_bottom = 45
+
+[node name="SpellEffect" type="Control" parent="TextureRect/VBoxContainer/NinePatchRect2/NinePatchRect4"]
+unique_name_in_owner = true
+physics_interpolation_mode = 0
+layout_mode = 1
+anchor_left = 0.092
+anchor_top = 0.287
+anchor_right = 0.909
+anchor_bottom = 0.714
+mouse_filter = 1
+script = ExtResource("2_8vm5s")
+metadata/_custom_type_script = "uid://bd5er6h0qw22m"

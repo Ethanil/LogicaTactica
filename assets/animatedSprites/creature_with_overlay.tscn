@@ -1,0 +1,238 @@
+[gd_scene load_steps=22 format=3 uid="uid://t5bipddcuwdq"]
+
+[ext_resource type="Script" uid="uid://c7b50nv0c40yq" path="res://assets/animatedSprites/creature_with_overlay.gd" id="1_tn4an"]
+[ext_resource type="SpriteFrames" uid="uid://dwhj1ntcxkkyb" path="res://assets/animatedSprites/red_panda.tres" id="2_7wppy"]
+[ext_resource type="Texture2D" uid="uid://bjt646slqtyak" path="res://assets/UI/ccby/Fliegend.png" id="3_jfkeg"]
+[ext_resource type="Texture2D" uid="uid://dqc1cf54tp5u8" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/progress_transparent_rotated.png" id="3_nuptm"]
+[ext_resource type="Texture2D" uid="uid://c5acko1rypcgq" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/progress_red_rotated.png" id="4_ai00g"]
+[ext_resource type="Texture2D" uid="uid://bnmr3747oht0s" path="res://assets/UI/ccby/Humanoid.png" id="4_racky"]
+[ext_resource type="Texture2D" uid="uid://bxmjhbnpo7udu" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Default/panel_brown.png" id="5_ai00g"]
+[ext_resource type="Texture2D" uid="uid://3l2uw7qy7nh" path="res://assets/UI/ccby/Insekt.png" id="5_yssws"]
+[ext_resource type="Texture2D" uid="uid://cqhxutltjruvv" path="res://assets/UI/ccby/Legendär.png" id="6_8f336"]
+[ext_resource type="Texture2D" uid="uid://bar47bin5tpni" path="res://assets/UI/cc0/kenney_board-game-icons/PNG/Double (128px)/sword.png" id="6_tuj5q"]
+[ext_resource type="Texture2D" uid="uid://38l7g0v5m1m3" path="res://assets/UI/cc0/kenney_board-game-icons/PNG/Double (128px)/shield.png" id="7_cxf8w"]
+[ext_resource type="Texture2D" uid="uid://c32ouqjrtocyd" path="res://assets/UI/ccby/Magical.png" id="7_lfpjl"]
+[ext_resource type="Texture2D" uid="uid://g4030qgrp4j8" path="res://assets/UI/ccby/Mechanisch.png" id="8_cyhks"]
+[ext_resource type="Texture2D" uid="uid://prjafs5jc437" path="res://assets/UI/ccby/Mythisch.png" id="9_khhe0"]
+[ext_resource type="Texture2D" uid="uid://bj6mm8wbfd53o" path="res://assets/UI/ccby/Tier.png" id="10_sllbf"]
+[ext_resource type="Texture2D" uid="uid://b4ds2sc754yvh" path="res://assets/UI/ccby/Untot.png" id="11_qaa30"]
+[ext_resource type="Texture2D" uid="uid://c8yuk7ywt8f8o" path="res://assets/UI/ccby/Wasserlebewesen.png" id="12_l12xe"]
+[ext_resource type="Texture2D" uid="uid://cacxtav11etm0" path="res://assets/UI/ccby/Pflanze.png" id="13_cneol"]
+[ext_resource type="Texture2D" uid="uid://ceky0f7bg2l4b" path="res://assets/UI/front_attacker.png" id="18_jfkeg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tuj5q"]
+texture = ExtResource("3_nuptm")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxf8w"]
+texture = ExtResource("4_ai00g")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[node name="CreatureWithOverlay" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_tn4an")
+
+[node name="Creature" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 40.6667)
+sprite_frames = ExtResource("2_7wppy")
+animation = &"idle"
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 6.0
+offset_right = 64.0
+offset_bottom = 87.0
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Container"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -30.0
+offset_bottom = 4.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 2
+alignment = 1
+last_wrap_alignment = 2
+reverse_fill = true
+
+[node name="Flying" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("3_jfkeg")
+expand_mode = 1
+
+[node name="Humanoid" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("4_racky")
+expand_mode = 1
+
+[node name="Insect" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("5_yssws")
+expand_mode = 1
+
+[node name="Legendary" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("6_8f336")
+expand_mode = 1
+
+[node name="Magical" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("7_lfpjl")
+expand_mode = 1
+
+[node name="Mechanical" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("8_cyhks")
+expand_mode = 1
+
+[node name="Mythical" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("9_khhe0")
+expand_mode = 1
+
+[node name="Animal" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("10_sllbf")
+expand_mode = 1
+
+[node name="Undead" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("11_qaa30")
+expand_mode = 1
+
+[node name="Aquatic" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("12_l12xe")
+expand_mode = 1
+
+[node name="Plant" type="TextureRect" parent="Container/HFlowContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("13_cneol")
+expand_mode = 1
+
+[node name="HealthBar" type="ProgressBar" parent="Container"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 240.0
+offset_bottom = 51.0
+grow_horizontal = 2
+scale = Vector2(0.23, 0.23)
+theme_override_styles/background = SubResource("StyleBoxTexture_tuj5q")
+theme_override_styles/fill = SubResource("StyleBoxTexture_cxf8w")
+step = 1.0
+value = 44.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="Container/HealthBar"]
+layout_mode = 0
+offset_right = 233.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 32
+text = "33/33"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AttackBackground" type="NinePatchRect" parent="Container"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 67.0
+offset_right = 257.0
+offset_bottom = 217.0
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("5_ai00g")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="AttackContainer" type="HBoxContainer" parent="Container/AttackBackground"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.5
+offset_top = -64.0
+offset_right = 92.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AttackLabel" type="Label" parent="Container/AttackBackground/AttackContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 93
+text = "5"
+
+[node name="AttackSymbol" type="TextureRect" parent="Container/AttackBackground/AttackContainer"]
+layout_mode = 2
+texture = ExtResource("6_tuj5q")
+
+[node name="AttackPattern" type="TextureRect" parent="Container/AttackBackground"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 149.0
+offset_right = 584.0
+offset_bottom = 259.0
+texture = ExtResource("18_jfkeg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DefenseBackground" type="NinePatchRect" parent="Container"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 67.0
+offset_right = 286.0
+offset_bottom = 217.0
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("5_ai00g")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="DefenseContainer" type="HBoxContainer" parent="Container/DefenseBackground"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.5
+offset_top = -64.0
+offset_right = 92.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DefenseLabel" type="Label" parent="Container/DefenseBackground/DefenseContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 93
+text = "5"
+
+[node name="DefenseSymbol" type="TextureRect" parent="Container/DefenseBackground/DefenseContainer"]
+layout_mode = 2
+texture = ExtResource("7_cxf8w")

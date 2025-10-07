@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://lvc7xmrm5w5a"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_0dgel"]
+[ext_resource type="Resource" uid="uid://dwn8vl4p44k08" path="res://assets/AudioResources/SFX/Roar.tres" id="1_wgd85"]
+[ext_resource type="SpriteFrames" uid="uid://bebwd3f8rw310" path="res://assets/animatedSprites/cyclops.tres" id="2_3i67m"]
+
+[resource]
+script = ExtResource("1_0dgel")
+name = "Zyklop"
+attack_value = 5
+health = 10
+defense = 3
+damaged_animations = Array[String](["damaged", "damaged2"])
+attack_animations = Array[String](["attack_stomp"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_wgd85")
+attack_sound_delay = 0.5
+sprite_y_offset = 0.0
+attributes = Array[int]([4, 12, 9])
+attack_pattern = 3
+sprite_Frames = ExtResource("2_3i67m")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

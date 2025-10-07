@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://w7nid8vh7w8a"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_g6w66"]
+[ext_resource type="AudioStream" uid="uid://3cnwcekown1c" path="res://assets/Sounds/ccbysa/ImagindarAbilitiesSoundEffectsPack/ability_celestial_hammer_hit.mp3" id="2_g6w66"]
+
+[resource]
+script = ExtResource("1_g6w66")
+title = "Celestial Hammer Hit"
+artist = "smokiee"
+sound = ExtResource("2_g6w66")
+link = "https://opengameart.org/content/imagindar-abilities-sound-effects-pack"
+license = 6
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

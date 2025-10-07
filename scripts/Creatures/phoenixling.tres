@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://bmq3trcv4ipe6"]
+
+[ext_resource type="Resource" uid="uid://dvg1o32frd2aq" path="res://assets/AudioResources/SFX/firespell.tres" id="1_dv418"]
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_k1p73"]
+[ext_resource type="SpriteFrames" uid="uid://c8wo0fiv4rbsj" path="res://assets/animatedSprites/phoenixling.tres" id="2_o1ggy"]
+
+[resource]
+script = ExtResource("1_k1p73")
+name = "Phönixling"
+attack_value = 9
+health = 1
+defense = 0
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_dv418")
+attack_sound_delay = 0.0
+sprite_y_offset = 0.0
+attributes = Array[int]([11, 1, 13, 5])
+attack_pattern = 2
+sprite_Frames = ExtResource("2_o1ggy")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

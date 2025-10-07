@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://b6ucab8jslpnk"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_xu0n0"]
+[ext_resource type="AudioStream" uid="uid://bgrbxyud0hk74" path="res://assets/Sounds/cc0/krank_sounds/water/magnet_off.wav" id="2_xu0n0"]
+
+[resource]
+script = ExtResource("1_xu0n0")
+title = "Water magnet off"
+artist = "legoluft"
+sound = ExtResource("2_xu0n0")
+link = "https://opengameart.org/content/atmospheric-interaction-sound-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

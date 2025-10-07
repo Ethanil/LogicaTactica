@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://ciqvcpd5ub37d"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_pvd3d"]
+[ext_resource type="AudioStream" uid="uid://brd7eecqnacwp" path="res://assets/Sounds/music/Escape the Dungeon- Frenetic Fight.mp3" id="2_tv05o"]
+
+[resource]
+script = ExtResource("1_pvd3d")
+title = "Escape the Dungeon"
+artist = "Bogart VGM"
+sound = ExtResource("2_tv05o")
+link = "https://opengameart.org/content/escape-the-dungeon-main-theme"
+license = 5
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

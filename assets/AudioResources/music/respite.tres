@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://lmtsj0usaokr"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_irqmt"]
+[ext_resource type="AudioStream" uid="uid://futra186xojh" path="res://assets/Sounds/music/Respite.mp3" id="2_etxj3"]
+
+[resource]
+script = ExtResource("1_irqmt")
+title = "Respite"
+artist = "Trevor Lentz"
+sound = ExtResource("2_etxj3")
+link = "https://opengameart.org/content/7-days-of-sorcery-full-album"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

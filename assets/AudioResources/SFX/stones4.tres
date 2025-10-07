@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://cofycnskkimph"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_4ps6a"]
+[ext_resource type="AudioStream" uid="uid://b2ril0nklg32o" path="res://assets/Sounds/cc0/80-CC0-RPG-SFX/stones_04.ogg" id="2_4ps6a"]
+
+[resource]
+script = ExtResource("1_4ps6a")
+title = "Stones 4"
+artist = "rubberduck"
+sound = ExtResource("2_4ps6a")
+link = "https://opengameart.org/content/80-cc0-rpg-sfx"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

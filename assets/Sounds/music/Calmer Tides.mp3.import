@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0gqgw5rtu5gp"
+path="res://.godot/imported/Calmer Tides.mp3-cb74178d1d9e7c57e87ae43e818f16c9.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/music/Calmer Tides.mp3"
+dest_files=["res://.godot/imported/Calmer Tides.mp3-cb74178d1d9e7c57e87ae43e818f16c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfo8m41jxicfk"]
+
+[ext_resource type="Texture2D" uid="uid://cs5bhpffj4hd3" path="res://assets/UI/cover.png" id="1_3h02k"]
+[ext_resource type="Script" uid="uid://dal2t7c46kexv" path="res://scripts/MainMenu/quit_button.gd" id="2_2x0po"]
+[ext_resource type="Script" uid="uid://ckedbwqxbtu2o" path="res://scripts/MainMenu/start_button.gd" id="2_dthau"]
+[ext_resource type="Script" uid="uid://dsrld001tllwn" path="res://how_to_play_button.gd" id="3_pesr7"]
+[ext_resource type="Script" uid="uid://drmrih1cuivqf" path="res://scripts/MainMenu/credits_button.gd" id="4_5u1ei"]
+[ext_resource type="Script" uid="uid://dwdgrrc0uwsb4" path="res://scripts/MainMenu/settings_button.gd" id="5_3riup"]
+[ext_resource type="Texture2D" uid="uid://bbww5j6nu8uhn" path="res://assets/UI/cc0/kenney_game-icons/PNG/White/2x/gear.png" id="6_pesr7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3h02k")
+expand_mode = 2
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.708
+anchor_top = 0.8
+anchor_right = 0.93
+anchor_bottom = 0.95
+theme_override_font_sizes/font_size = 80
+text = "Start!"
+script = ExtResource("2_dthau")
+
+[node name="HowToPlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.708
+anchor_top = 0.8
+anchor_right = 0.93
+anchor_bottom = 0.95
+offset_top = -1084.0
+offset_bottom = -1084.0
+theme_override_font_sizes/font_size = 80
+text = "Tutorial"
+script = ExtResource("3_pesr7")
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.85
+anchor_right = 0.15
+anchor_bottom = 0.89
+offset_top = -1.0
+offset_bottom = -1.0
+theme_override_font_sizes/font_size = 30
+text = "Credits"
+script = ExtResource("4_5u1ei")
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.91
+anchor_right = 0.15
+anchor_bottom = 0.95
+theme_override_font_sizes/font_size = 30
+text = "Quit :("
+script = ExtResource("2_2x0po")
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.08
+anchor_bottom = 0.13
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("6_pesr7")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_3riup")
+
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="HowToPlayButton" to="HowToPlayButton" method="_on_pressed"]
+[connection signal="pressed" from="CreditsButton" to="CreditsButton" method="_on_pressed"]
+[connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]
+[connection signal="pressed" from="SettingsButton" to="SettingsButton" method="_on_pressed"]

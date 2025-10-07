@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://4y8gfpuseyp5"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_4ewrl"]
+[ext_resource type="AudioStream" uid="uid://bfsomq8o3txg1" path="res://assets/Sounds/cc0/winfretless.ogg" id="2_4ewrl"]
+
+[resource]
+script = ExtResource("1_4ewrl")
+title = "Win"
+artist = "Fupi"
+sound = ExtResource("2_4ewrl")
+link = "https://opengameart.org/content/win-jingle"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

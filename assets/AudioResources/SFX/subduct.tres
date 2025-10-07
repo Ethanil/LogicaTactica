@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://dujdn2j4y16q5"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_34cxx"]
+[ext_resource type="AudioStream" uid="uid://bpeo0bgxqgmec" path="res://assets/Sounds/ccbysa/ImagindarAbilitiesSoundEffectsPack/ability_subduct_up.mp3" id="2_34cxx"]
+
+[resource]
+script = ExtResource("1_34cxx")
+title = "Subduct up"
+artist = "smokiee"
+sound = ExtResource("2_34cxx")
+link = "https://opengameart.org/content/imagindar-abilities-sound-effects-pack"
+license = 6
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

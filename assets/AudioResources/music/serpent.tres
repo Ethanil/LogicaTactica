@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://coretff7kjubg"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_sys24"]
+[ext_resource type="AudioStream" uid="uid://b1mou68jpickm" path="res://assets/Sounds/music/Serpent.mp3" id="2_c4u4m"]
+
+[resource]
+script = ExtResource("1_sys24")
+title = "Serpent"
+artist = "Trevor Lentz"
+sound = ExtResource("2_c4u4m")
+link = "https://opengameart.org/content/7-days-of-sorcery-full-album"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

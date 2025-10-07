@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://brlrb6wfrg0b"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_abgxk"]
+[ext_resource type="AudioStream" uid="uid://nx0gvekvvhnr" path="res://assets/Sounds/cc0/game_over_bad_chest.wav" id="2_abgxk"]
+
+[resource]
+script = ExtResource("1_abgxk")
+title = "Loose"
+artist = "Oiboo"
+sound = ExtResource("2_abgxk")
+link = "https://opengameart.org/content/game-over-bad-chest-sfx"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

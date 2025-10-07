@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://h6wydeykrsdp"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_reydo"]
+[ext_resource type="AudioStream" uid="uid://cvyqcko1ybnps" path="res://assets/Sounds/cc0/qubodupImpact/qubodupImpactMeat02.ogg" id="2_reydo"]
+
+[resource]
+script = ExtResource("1_reydo")
+title = "Wet"
+artist = "qubodup"
+sound = ExtResource("2_reydo")
+link = "https://opengameart.org/content/impact"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

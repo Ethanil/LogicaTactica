@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi53dbulfrlm5"]
+
+[ext_resource type="Script" uid="uid://cw5h0sbced15p" path="res://scripts/Main/rewardScreen.gd" id="1_q0cqi"]
+[ext_resource type="Texture2D" uid="uid://ctwmk0ryaox54" path="res://assets/UI/creature_texture.tres" id="2_rml6h"]
+
+[node name="RewardScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q0cqi")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(0, 210)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 709.0
+offset_top = 667.0
+offset_right = 1935.0
+offset_bottom = 1400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rml6h")
+patch_margin_left = 54
+patch_margin_top = 45
+patch_margin_right = 57
+patch_margin_bottom = 53
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 19.0
+offset_bottom = 204.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = "Level geschafft!
+Suche dir eine Karte raus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 904.0
+offset_right = 1847.0
+offset_bottom = 1272.0
+theme_override_constants/separation = 50

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://u53ct035b70k"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_gh4np"]
+[ext_resource type="AudioStream" uid="uid://tsdo2320dnqe" path="res://assets/Sounds/music/Destiny Calls.mp3" id="2_eir1g"]
+
+[resource]
+script = ExtResource("1_gh4np")
+title = "Destiny Calls"
+artist = "Trevor Lentz"
+sound = ExtResource("2_eir1g")
+link = "https://opengameart.org/content/7-days-of-sorcery-full-album"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

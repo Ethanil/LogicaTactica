@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1cdav404cbdx"
+path="res://.godot/imported/Warrior's Courage.mp3-d166a548ebbcc95d2b28651aa91ab752.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/music/Warrior's Courage.mp3"
+dest_files=["res://.godot/imported/Warrior's Courage.mp3-d166a548ebbcc95d2b28651aa91ab752.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

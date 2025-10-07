@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://c077toswcj4ys"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_p2qq0"]
+[ext_resource type="AudioStream" uid="uid://b0rybarpok1od" path="res://assets/Sounds/cc0/80-CC0-creature-SFX/eat_02.ogg" id="2_fiwg7"]
+
+[resource]
+script = ExtResource("1_p2qq0")
+title = "Eat"
+artist = "rubberduck"
+sound = ExtResource("2_fiwg7")
+link = "https://opengameart.org/content/80-cc0-creature-sfx"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

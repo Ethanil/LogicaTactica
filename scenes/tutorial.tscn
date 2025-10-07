@@ -1,0 +1,2328 @@
+[gd_scene load_steps=9 format=3 uid="uid://dy1xsnwcvfcq6"]
+
+[ext_resource type="Script" uid="uid://d2gshswfwx5su" path="res://scripts/Tutorial/tutorial_controller.gd" id="1_c13y7"]
+[ext_resource type="PackedScene" uid="uid://ffomkmu71f51" path="res://cardScene.tscn" id="2_8ho6b"]
+[ext_resource type="Script" uid="uid://b7gk8ydhtdhh" path="res://scripts/Tutorial/textbox.gd" id="3_cq4me"]
+[ext_resource type="Texture2D" uid="uid://btmtpju1ekrji" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Default/panel_grey_blue.png" id="4_cq4me"]
+[ext_resource type="Texture2D" uid="uid://d20bpdj30frq3" path="res://assets/UI/cc0/kenney_game-icons/PNG/White/2x/right.png" id="4_gbqnl"]
+[ext_resource type="Texture2D" uid="uid://y43gcgewx20e" path="res://assets/UI/cc0/kenney_game-icons/PNG/Black/2x/right.png" id="5_6yjpi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c13y7"]
+bg_color = Color(0.16, 0.16, 0.16, 0.8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6yjpi"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2560.0
+offset_bottom = 1440.0
+
+[node name="TutorialController" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_c13y7")
+metadata/_custom_type_script = "uid://d2gshswfwx5su"
+
+[node name="Background" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 21
+
+[node name="Panel" type="Panel" parent="Background"]
+offset_right = 2560.0
+offset_bottom = 1440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c13y7")
+
+[node name="Background2" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 20
+
+[node name="ExampleCardContainer" type="Control" parent="Background2"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" parent="Background2/ExampleCardContainer" instance=ExtResource("2_8ho6b")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.5
+offset_top = -437.5
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="Highlight" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 30
+
+[node name="0" type="Control" parent="Highlight"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 622.0
+offset_right = 764.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/0"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/0"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/0/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Eine Karte besteht immer aus 2 Teilen..."
+vertical_alignment = 1
+
+[node name="1" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 727.0
+offset_right = 764.0
+offset_bottom = 767.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/1"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/1"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/1"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/1/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "dem Kreaturen- und ..."
+vertical_alignment = 1
+
+[node name="2" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 485.0
+offset_right = 764.0
+offset_bottom = 525.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/2"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/2"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/2"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/2/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "dem Zauber-Bereich."
+vertical_alignment = 1
+
+[node name="3" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 727.0
+offset_right = 764.0
+offset_bottom = 767.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/3"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/3"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/3"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/3/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Diese sind jeweils noch einmal in 2 Bereiche aufgeteilt."
+vertical_alignment = 1
+
+[node name="4" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 727.0
+offset_right = 764.0
+offset_bottom = 767.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/4"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/4"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/4"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/4/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Beide Bereiche haben jeweils eine Formel."
+vertical_alignment = 1
+
+[node name="5" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 727.0
+offset_right = 764.0
+offset_bottom = 767.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/5"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/5"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/5"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/5/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Die obere Formel ist eine Bedingung."
+vertical_alignment = 1
+
+[node name="6" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 727.0
+offset_right = 764.0
+offset_bottom = 767.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/6"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/6"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/6"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/6/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Die untere stellt einen Effekt dar."
+vertical_alignment = 1
+
+[node name="7" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 48.0
+offset_right = 764.0
+offset_bottom = 88.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/7"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/7"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/7"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -45.0
+offset_right = 972.0
+offset_bottom = 237.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/7/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn du die Karte ausspielst und die Bedingung erfüllt ist, dann wird der Effekt ausgelöst."
+vertical_alignment = 1
+
+[node name="8" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 48.0
+offset_right = 764.0
+offset_bottom = 88.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/8"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/8"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/8"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -45.0
+offset_right = 972.0
+offset_bottom = 237.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/8/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Das ist deine Hand, in der du alle spielbaren Karten siehst."
+vertical_alignment = 1
+
+[node name="9" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 622.0
+offset_right = 764.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/9"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/9"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/9"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -41.0
+offset_right = 972.0
+offset_bottom = 222.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/9/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Karten spielst du aus, indem du sie aus der Hand in den jeweiligen Bereich spielst."
+vertical_alignment = 1
+
+[node name="10" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 622.0
+offset_right = 764.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/10"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/10"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/10"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/10/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hier um den oberen (Kreaturen-) Bereich auszulösen"
+vertical_alignment = 1
+
+[node name="11" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 622.0
+offset_right = 764.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/11"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/11"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/11"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/11/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hier um den unteren (Zauber-) Bereich auszulösen"
+vertical_alignment = 1
+
+[node name="12" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1586.0
+offset_top = 568.0
+offset_right = 1626.0
+offset_bottom = 608.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/12"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -84.0
+offset_right = 972.0
+offset_bottom = 266.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/12/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Spiele die Karte jetzt als Kreaturenkarte, indem du sie per drag-and-drop auf den Kreaturenbereich ziehst."
+vertical_alignment = 1
+
+[node name="13" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 622.0
+offset_right = 764.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/13"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/13"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/13"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -84.0
+offset_right = 972.0
+offset_bottom = 266.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/13/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Spiele die Karte jetzt als Kreaturenkarte, indem du sie per drag-and-drop auf den Kreaturenbereich ziehst."
+vertical_alignment = 1
+
+[node name="14" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/14"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/14"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/14"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -41.0
+offset_right = 972.0
+offset_bottom = 214.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/14/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Da die Bedingung erfüllt war, ist der Effekt auch ausgelöst worden."
+vertical_alignment = 1
+
+[node name="15" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/15"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/15"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/15"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -73.0
+offset_right = 972.0
+offset_bottom = 268.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/15/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn die Bedingung nicht erfüllt ist, verlierst du als Bestrafung eine zufällige Karte aus deiner Hand."
+vertical_alignment = 1
+
+[node name="16" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1588.0
+offset_top = 596.0
+offset_right = 1628.0
+offset_bottom = 636.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/16"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 257.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/16/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Keine der Bedingungen deiner Hand sind erfüllt. Spiele jetzt eine davon als Kreatur aus."
+vertical_alignment = 1
+
+[node name="17" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/17"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/17"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/17"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/17/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "versteckt"
+vertical_alignment = 1
+
+[node name="18" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/18"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/18"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 229.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/18/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn alle möglichen Karten gespielt wurden, ist der automatische Kampf dran!"
+vertical_alignment = 1
+
+[node name="19" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/19"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/19"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/19"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -71.0
+offset_right = 972.0
+offset_bottom = 261.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/19/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Dafür einfach auf den \"Kampf starten\"-Knopf drücken, der Kampf läuft dann automatisch ab:"
+vertical_alignment = 1
+
+[node name="20" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/20"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/20"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/20"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -41.0
+offset_right = 972.0
+offset_bottom = 208.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/20/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Zuerst greifen alle Verbündeten an und zwar die Gegner, die sie laut Icons angreifen können ..."
+vertical_alignment = 1
+
+[node name="21" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/21"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/21"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/21"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 972.0
+offset_bottom = 206.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/21/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "danach alle Gegner auf die gleiche Weise."
+vertical_alignment = 1
+
+[node name="22" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/22"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/22"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/22"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -73.0
+offset_right = 972.0
+offset_bottom = 257.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/22/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hier ist ein vorbereiteter Kampf, wenn du über die Kreaturen fährst, siehst du mehr Informationen."
+vertical_alignment = 1
+
+[node name="23" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/23"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/23"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/23"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/23/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Jede Kreatur hat Eigenschaften, Lebenspunkte, Schaden und Verteidigung."
+vertical_alignment = 1
+
+[node name="24" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1584.0
+offset_top = 602.0
+offset_right = 1624.0
+offset_bottom = 642.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/24"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -80.0
+offset_right = 972.0
+offset_bottom = 261.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/24/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Schaue dir die Kreaturen an und starte dann den Kampf indem du auf den \"Kampf starten\" Knopf drückst."
+vertical_alignment = 1
+
+[node name="25" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1577.0
+offset_top = 622.0
+offset_right = 1617.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/25"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -71.0
+offset_right = 972.0
+offset_bottom = 261.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/25/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn der Kampf so weiter geht, werden deine Pandas besiegt, verwende deine Karte als Zauber zum Heilen."
+vertical_alignment = 1
+
+[node name="26" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/26"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/26"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/26"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/26/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "empty"
+vertical_alignment = 1
+
+[node name="27" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1584.0
+offset_top = 622.0
+offset_right = 1624.0
+offset_bottom = 662.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/27"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/27/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Starte jetzt noch 2 Kampfrunden!"
+vertical_alignment = 1
+
+[node name="28" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/28"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/28"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/28"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/28/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "empty"
+vertical_alignment = 1
+
+[node name="29" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/29"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/29"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/29/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Deinen ersten Kampf hast du gewonnen, jetzt noch ein paar Infos:"
+vertical_alignment = 1
+
+[node name="30" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/30"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/30"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/30"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -123.0
+offset_right = 972.0
+offset_bottom = 280.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/30/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Am Anfang jeder Runde ziehst du 6 Karten, die du ausspielen kannst, dann startest du den Kampf, nachdem eine neue Runde beginnt."
+vertical_alignment = 1
+
+[node name="31" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 212.0
+offset_top = 77.0
+offset_right = 252.0
+offset_bottom = 117.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/31"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/31"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/31"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/31/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hierüber kannst du Spieleinstellungen ändern."
+vertical_alignment = 1
+
+[node name="32" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1298.0
+offset_top = 148.0
+offset_right = 1338.0
+offset_bottom = 188.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/32"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/32"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/32"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/32/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hier siehst du alle möglichen Kreaturen und ihre Eigenschaften."
+vertical_alignment = 1
+
+[node name="33" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 340.0
+offset_top = 1059.0
+offset_right = 380.0
+offset_bottom = 1099.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/33"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/33"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/33"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/33/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hier kannst du dir dein Deck anschauen."
+vertical_alignment = 1
+
+[node name="34" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1251.0
+offset_top = 1027.0
+offset_right = 1291.0
+offset_bottom = 1067.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/34"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/34"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/34"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/34/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Hier deinen Ablagestapel"
+vertical_alignment = 1
+
+[node name="35" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/35"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/35"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/35"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/35/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn dein Deck leer ist, wird dein Ablagestapel wieder herein gemischt."
+vertical_alignment = 1
+
+[node name="36" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/36"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/36"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/36"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -69.0
+offset_right = 972.0
+offset_bottom = 257.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/36/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Das Spiel läuft in verschiedenen Leveln ab, die du in einer Übersicht jeweils auswählen kannst."
+vertical_alignment = 1
+
+[node name="37" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/37"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/37"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/37"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -75.0
+offset_right = 972.0
+offset_bottom = 257.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/37/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn du ein Level gewonnen hast, darfst du für diesen Durchlauf eine Karte deinem Deck hinzufügen."
+vertical_alignment = 1
+
+[node name="38" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/38"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/38"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/38"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/38/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Wenn du verlierst, musst du wieder von vorne anfangen."
+vertical_alignment = 1
+
+[node name="39" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/39"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/39"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/39"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/39/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "Viel Spaß mit dem Spiel!"
+vertical_alignment = 1
+
+[node name="40" type="Control" parent="Highlight"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 225.0
+offset_right = 764.0
+offset_bottom = 265.0
+script = ExtResource("3_cq4me")
+metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
+
+[node name="Next" type="TextureButton" parent="Highlight/40"]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 31.0
+offset_right = 1071.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+
+[node name="Previous" type="TextureButton" parent="Highlight/40"]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 31.0
+offset_right = 89.0
+offset_bottom = 159.0
+texture_normal = ExtResource("4_gbqnl")
+texture_hover = ExtResource("5_6yjpi")
+stretch_mode = 0
+flip_h = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Highlight/40"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -39.0
+offset_right = 972.0
+offset_bottom = 218.0
+texture = ExtResource("4_cq4me")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Highlight/40/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
+text = "empty"
+vertical_alignment = 1
+
+[connection signal="button_down" from="Highlight/0/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/1/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/1/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/2/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/2/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/3/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/3/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/4/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/4/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/5/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/5/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/6/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/6/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/7/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/7/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/8/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/8/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/9/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/9/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/10/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/10/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/11/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/11/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/13/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/13/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/14/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/14/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/15/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/15/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/17/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/17/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/18/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/19/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/19/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/20/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/20/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/21/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/21/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/22/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/22/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/23/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/23/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/26/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/26/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/28/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/28/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/29/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/30/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/30/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/31/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/31/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/32/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/32/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/33/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/33/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/34/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/34/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/35/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/35/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/36/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/36/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/37/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/37/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/38/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/38/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/39/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/39/Previous" to="TutorialController" method="_on_previous_button_down"]
+[connection signal="button_down" from="Highlight/40/Next" to="TutorialController" method="_on_next_button_down"]
+[connection signal="button_down" from="Highlight/40/Previous" to="TutorialController" method="_on_previous_button_down"]

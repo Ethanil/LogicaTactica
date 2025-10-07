@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://dat00osraf85u"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_2lpj2"]
+[ext_resource type="Resource" uid="uid://cnaya3mpevy70" path="res://assets/AudioResources/SFX/Scream.tres" id="1_eboiu"]
+[ext_resource type="SpriteFrames" uid="uid://ddd45v868hfwv" path="res://assets/animatedSprites/cacodaemon.tres" id="2_wwlba"]
+
+[resource]
+script = ExtResource("1_2lpj2")
+name = "Kakodämon"
+attack_value = 10
+health = 5
+defense = 2
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_eboiu")
+attack_sound_delay = 0.0
+sprite_y_offset = 0.0
+attributes = Array[int]([2, 4, 5, 1, 12])
+attack_pattern = 0
+sprite_Frames = ExtResource("2_wwlba")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

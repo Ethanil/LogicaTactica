@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://oirtysee3hnp"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_y1k7x"]
+[ext_resource type="AudioStream" uid="uid://bsab5nyus0ail" path="res://assets/Sounds/music/bullfrogdungeon.mp3" id="2_lv36o"]
+
+[resource]
+script = ExtResource("1_y1k7x")
+title = "Bullfrog Dungeon"
+artist = "Trevor Lentz"
+sound = ExtResource("2_lv36o")
+link = "https://opengameart.org/content/bullfrog-dungeon-chiptune-loop"
+license = 6
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

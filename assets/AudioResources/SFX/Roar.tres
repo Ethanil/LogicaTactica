@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://dwn8vl4p44k08"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_0rem1"]
+[ext_resource type="AudioStream" uid="uid://dfrwb7cpvbsq2" path="res://assets/Sounds/cc0/80-CC0-creature-SFX/roar_03.ogg" id="2_0rem1"]
+
+[resource]
+script = ExtResource("1_0rem1")
+title = "Roar"
+artist = "rubberduck"
+sound = ExtResource("2_0rem1")
+link = "https://opengameart.org/content/80-cc0-creature-sfx"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

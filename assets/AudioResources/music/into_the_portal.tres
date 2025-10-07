@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://y1ger4is4dmw"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_rymja"]
+[ext_resource type="AudioStream" uid="uid://uan3akhe6nba" path="res://assets/Sounds/music/Into the Portal.mp3" id="2_74vgs"]
+
+[resource]
+script = ExtResource("1_rymja")
+title = "Into The Portal"
+artist = "Trevor Lentz"
+sound = ExtResource("2_74vgs")
+link = "https://opengameart.org/content/7-days-of-sorcery-full-album"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

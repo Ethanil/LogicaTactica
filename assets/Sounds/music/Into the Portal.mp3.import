@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://uan3akhe6nba"
+path="res://.godot/imported/Into the Portal.mp3-bd24866b4c2fc1e5decc04f5bc5139da.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/music/Into the Portal.mp3"
+dest_files=["res://.godot/imported/Into the Portal.mp3-bd24866b4c2fc1e5decc04f5bc5139da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

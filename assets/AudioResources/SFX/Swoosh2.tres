@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://bfd24c34o4lp8"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_kfcad"]
+[ext_resource type="AudioStream" uid="uid://cg0aj7ywsbyg3" path="res://assets/Sounds/cc0/rpg_sound_pack/RPG Sound Pack/battle/swing3.wav" id="2_kfcad"]
+
+[resource]
+script = ExtResource("1_kfcad")
+title = "Swoosh2"
+artist = "artisticdude"
+sound = ExtResource("2_kfcad")
+link = "https://opengameart.org/content/rpg-sound-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

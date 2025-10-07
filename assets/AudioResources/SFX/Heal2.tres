@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://damomb4muqnh4"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_wtij2"]
+[ext_resource type="AudioStream" uid="uid://t6t50bmle6t8" path="res://assets/Sounds/ccbysa/3 heal spells/healspell2.wav" id="2_4hvqh"]
+
+[resource]
+script = ExtResource("1_wtij2")
+title = "Heal2"
+artist = "DoKashiteru"
+sound = ExtResource("2_4hvqh")
+link = "https://opengameart.org/content/3-heal-spells"
+license = 2
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

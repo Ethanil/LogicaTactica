@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://crbekc4clcdbr"]
+
+[ext_resource type="Script" uid="uid://bossspu815x53" path="res://music_player.gd" id="1_ryb5w"]
+[ext_resource type="Texture2D" uid="uid://buufliffffs2f" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/panel_grey_green.png" id="2_kjvmg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yqrf"]
+content_margin_left = 30.0
+content_margin_right = 40.0
+
+[node name="Node" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -35.0
+script = ExtResource("1_ryb5w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="MusicInformation" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -62.0
+offset_bottom = 62.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3yqrf")
+bbcode_enabled = true
+text = "[font_size=40]Escape the Dungeon[/font_size]
+[i][font_size=10]von Artist[/font_size][/i]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MusicInformationBackground" type="NinePatchRect" parent="CanvasLayer/MusicInformation"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kjvmg")
+region_rect = Rect2(0, 0, 128, 128)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="ready" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_ready"]

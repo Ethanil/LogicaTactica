@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://b22tn1y6qh3uk"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_5aaq3"]
+[ext_resource type="AudioStream" uid="uid://buyfpe83ua0e4" path="res://assets/Sounds/music/arcade_acadia.mp3" id="2_kvurt"]
+
+[resource]
+script = ExtResource("1_5aaq3")
+title = "Arcade Acadia"
+artist = "Trevor Lentz"
+sound = ExtResource("2_kvurt")
+link = "https://opengameart.org/content/arcade-acadia"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

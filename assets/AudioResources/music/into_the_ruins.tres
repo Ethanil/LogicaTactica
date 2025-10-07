@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://dwh5wwtqvb1eg"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_a58uj"]
+[ext_resource type="AudioStream" uid="uid://msgqdie5hf1j" path="res://assets/Sounds/music/Viktor Kraus - Into the Ruins.wav" id="2_n61vi"]
+
+[resource]
+script = ExtResource("1_a58uj")
+title = "Into the Ruins"
+artist = "Viktor Kraus"
+sound = ExtResource("2_n61vi")
+link = "https://opengameart.org/content/into-the-ruins"
+license = 2
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

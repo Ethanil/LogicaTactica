@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnwiex5bk26w3"
+path="res://.godot/imported/Temple Doors.mp3-49afc2d4468b1b726a45504528247b9e.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/music/Temple Doors.mp3"
+dest_files=["res://.godot/imported/Temple Doors.mp3-49afc2d4468b1b726a45504528247b9e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

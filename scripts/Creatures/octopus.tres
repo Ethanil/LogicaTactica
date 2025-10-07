@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://cotbtmck4a16c"]
+
+[ext_resource type="Resource" uid="uid://h6wydeykrsdp" path="res://assets/AudioResources/SFX/Wet.tres" id="1_1u683"]
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_gfrp7"]
+[ext_resource type="SpriteFrames" uid="uid://hapr51vr2dwy" path="res://assets/animatedSprites/octopus.tres" id="2_1wljl"]
+
+[resource]
+script = ExtResource("1_gfrp7")
+name = "Oktopus"
+attack_value = 2
+health = 4
+defense = 3
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_1u683")
+attack_sound_delay = 0.2
+sprite_y_offset = 0.0
+attributes = Array[int]([0, 7, 11])
+attack_pattern = 1
+sprite_Frames = ExtResource("2_1wljl")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

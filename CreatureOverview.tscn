@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://drsl6opulm2a"]
+
+[ext_resource type="Script" uid="uid://dkbkko18oav0t" path="res://scripts/Creatures/creature_overview.gd" id="1_7saa3"]
+[ext_resource type="Texture2D" uid="uid://l85saiewxtq7" path="res://assets/UI/kenney_ui-pack-adventure/PNG/Double/checkbox_brown_cross.png" id="2_2l106"]
+
+[node name="CreatureOverview" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2560.0
+offset_bottom = 1440.0
+script = ExtResource("1_7saa3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.99
+anchor_right = 0.5
+anchor_bottom = 0.99
+offset_left = -147.0
+offset_top = -72.0
+offset_right = 147.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 46
+text = "Schließen"
+icon = ExtResource("2_2l106")
+icon_alignment = 2
+expand_icon = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.005
+anchor_right = 0.995
+anchor_bottom = 0.995
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 26
+theme_override_constants/v_separation = 26
+columns = 6

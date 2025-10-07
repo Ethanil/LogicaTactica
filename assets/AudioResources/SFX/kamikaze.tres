@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://b6b37akwqnj3p"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_av4iw"]
+[ext_resource type="AudioStream" uid="uid://dy720g24cbsxh" path="res://assets/Sounds/ccbysa/ImagindarAbilitiesSoundEffectsPack/ability_kamikaze.mp3" id="2_av4iw"]
+
+[resource]
+script = ExtResource("1_av4iw")
+title = "Kamikaze"
+artist = "smokiee"
+sound = ExtResource("2_av4iw")
+link = "https://opengameart.org/content/imagindar-abilities-sound-effects-pack"
+license = 6
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

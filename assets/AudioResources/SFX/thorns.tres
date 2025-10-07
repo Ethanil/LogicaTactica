@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://dqe12frpdmd7p"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_tla50"]
+[ext_resource type="AudioStream" uid="uid://0s0bfu8r1ero" path="res://assets/Sounds/ccbysa/ImagindarAbilitiesSoundEffectsPack/ability_thorns.mp3" id="2_tla50"]
+
+[resource]
+script = ExtResource("1_tla50")
+title = "Thorns"
+artist = "smokiee"
+sound = ExtResource("2_tla50")
+link = "https://opengameart.org/content/imagindar-abilities-sound-effects-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://bhry465s6e7vb"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_j01sf"]
+[ext_resource type="AudioStream" uid="uid://bwaepcatk8sye" path="res://assets/Sounds/ccbysa/foom_0.wav" id="2_0hc3p"]
+
+[resource]
+script = ExtResource("1_j01sf")
+title = "Spell 4 (Fire)"
+artist = "Bart Kelsey"
+sound = ExtResource("2_0hc3p")
+link = "https://opengameart.org/content/spell-4-fire"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

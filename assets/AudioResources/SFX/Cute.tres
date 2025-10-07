@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://hk8jiwgfk2h8"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_q0hv7"]
+[ext_resource type="AudioStream" uid="uid://0mf7nd458yxn" path="res://assets/Sounds/cc0/80-CC0-creature-SFX/cute_05.ogg" id="2_q0hv7"]
+
+[resource]
+script = ExtResource("1_q0hv7")
+title = "Cute"
+artist = "rubberduck"
+sound = ExtResource("2_q0hv7")
+link = "https://opengameart.org/content/80-cc0-creature-sfx"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

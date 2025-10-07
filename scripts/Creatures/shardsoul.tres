@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://br56ym8vfc5gr"]
+
+[ext_resource type="Resource" uid="uid://csw21cphpkmfj" path="res://assets/AudioResources/SFX/Swoosh1.tres" id="1_46vc8"]
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_xf7eq"]
+[ext_resource type="SpriteFrames" uid="uid://deoog8iesx88w" path="res://assets/animatedSprites/shardsoul.tres" id="2_46vc8"]
+
+[resource]
+script = ExtResource("1_xf7eq")
+name = "Splitterseele"
+attack_value = 4
+health = 4
+defense = 4
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_46vc8")
+attack_sound_delay = 0.3
+sprite_y_offset = 0.0
+attributes = Array[int]([1, 2, 5, 4, 12])
+attack_pattern = 0
+sprite_Frames = ExtResource("2_46vc8")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

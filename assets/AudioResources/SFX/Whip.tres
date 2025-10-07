@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://1wpgbmhtqbdg"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_gdxo5"]
+[ext_resource type="AudioStream" uid="uid://daytgnjcg3nav" path="res://assets/Sounds/ccbysa/whip.wav" id="2_gdxo5"]
+
+[resource]
+script = ExtResource("1_gdxo5")
+title = "Whip"
+artist = "Reemax"
+sound = ExtResource("2_gdxo5")
+link = "https://opengameart.org/content/whip-sound"
+license = 5
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

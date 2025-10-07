@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://1atkag3g1ret"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_540ev"]
+[ext_resource type="Resource" uid="uid://rtjcgn44awrn" path="res://assets/AudioResources/SFX/Jump.tres" id="1_e4ukj"]
+[ext_resource type="SpriteFrames" uid="uid://dwhj1ntcxkkyb" path="res://assets/animatedSprites/red_panda.tres" id="2_2yjbk"]
+
+[resource]
+script = ExtResource("1_540ev")
+name = "Roter Panda"
+attack_value = 6
+health = 10
+defense = 2
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_e4ukj")
+attack_sound_delay = 0.4
+sprite_y_offset = 16.0
+attributes = Array[int]([0, 10])
+attack_pattern = 2
+sprite_Frames = ExtResource("2_2yjbk")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://cp5l7s6dcxg8x"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_8y5k4"]
+[ext_resource type="AudioStream" uid="uid://deeiawx010q2j" path="res://assets/Sounds/cc0/rpg_sound_pack/RPG Sound Pack/misc/random3.wav" id="2_8y5k4"]
+
+[resource]
+script = ExtResource("1_8y5k4")
+title = "Random 3"
+artist = "artisticdude"
+sound = ExtResource("2_8y5k4")
+link = "https://opengameart.org/content/rpg-sound-pack"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

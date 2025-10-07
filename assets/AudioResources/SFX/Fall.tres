@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://cn0har8brindq"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_s8tds"]
+[ext_resource type="AudioStream" uid="uid://8fqrdfvt66q" path="res://assets/Sounds/ccbysa/fall.wav" id="2_s8tds"]
+
+[resource]
+script = ExtResource("1_s8tds")
+title = "Falling body"
+artist = "remaxim"
+sound = ExtResource("2_s8tds")
+link = "https://opengameart.org/content/falling-body"
+license = 4
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioAssetWithMetadata" load_steps=3 format=3 uid="uid://buyg18u2hwuqw"]
+
+[ext_resource type="Script" uid="uid://ddmk680e8adgu" path="res://scripts/audio/audioasset_with_metadata.gd" id="1_e7t0o"]
+[ext_resource type="AudioStream" uid="uid://dp1toprn6b710" path="res://assets/Sounds/cc0/teleport.wav" id="2_e7t0o"]
+
+[resource]
+script = ExtResource("1_e7t0o")
+title = "Teleport"
+artist = "Ogrebane"
+sound = ExtResource("2_e7t0o")
+link = "https://opengameart.org/content/teleport-spell"
+license = 0
+metadata/_custom_type_script = "uid://ddmk680e8adgu"

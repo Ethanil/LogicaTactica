@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CreatureData" load_steps=4 format=3 uid="uid://bnt0fwsve3jwb"]
+
+[ext_resource type="Script" uid="uid://bd00li4rmv1hi" path="res://scripts/Creatures/creature_data.gd" id="1_jdmvv"]
+[ext_resource type="Resource" uid="uid://1wpgbmhtqbdg" path="res://assets/AudioResources/SFX/Whip.tres" id="1_oadsl"]
+[ext_resource type="SpriteFrames" uid="uid://c71ol7gxgtpsd" path="res://assets/animatedSprites/archaeologist.tres" id="2_eripv"]
+
+[resource]
+script = ExtResource("1_jdmvv")
+name = "Archäologe"
+attack_value = 5
+health = 12
+defense = 2
+damaged_animations = Array[String](["damaged"])
+attack_animations = Array[String](["attack"])
+death_animations = Array[String](["death"])
+attack_sound = ExtResource("1_oadsl")
+attack_sound_delay = 0.0
+sprite_y_offset = 16.0
+attributes = Array[int]([9, 11])
+attack_pattern = 3
+sprite_Frames = ExtResource("2_eripv")
+metadata/_custom_type_script = "uid://bd00li4rmv1hi"
