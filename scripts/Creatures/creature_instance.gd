@@ -20,7 +20,6 @@ var damaged_animations: Array[String]
 var death_animations: Array[String]
 
 signal died()
-signal animation_finished(inst:CreatureInstance)
 var dying := false
 
 var audio_player: AudioStreamPlayer
@@ -87,61 +86,6 @@ func die() -> void:
 	await creature_with_overlay.sprite.animation_finished
 	arr.remove_at(arr.find(self))
 	died.emit()
-
-func play_damaged_animation(speed:float = 1) -> void:
-	if animation_is_running:
-		await animation_finished
-	animation_is_running = true
-	var original_color :=creature_with_overlay.sprite.modulate
-	var tween = create_tween()
-	creature_with_overlay.sprite.modulate = Color.BLACK
-	tween.tween_property(creature_with_overlay.sprite, "modulate", original_color, 0.3)
-	creature_with_overlay.sprite.play(damaged_animations.pick_random(), speed)
-	await creature_with_overlay.sprite.animation_finished
-	creature_with_overlay.sprite.play("idle")
-	animation_is_running = false
-	animation_finished.emit(self)
-
-func play_death_animation(speed:float = 1) -> void:
-	if animation_is_running:
-		await animation_finished
-	animation_is_running = true
-	var original_color :=creature_with_overlay.sprite.modulate
-	var tween = create_tween()
-	creature_with_overlay.sprite.modulate = Color.BLACK
-	tween.tween_property(creature_with_overlay.sprite, "modulate", original_color, 0.3)
-	creature_with_overlay.sprite.play(death_animations.pick_random(), speed)
-	await creature_with_overlay.sprite.animation_finished
-	animation_is_running = false
-	animation_finished.emit(self)
-
-func play_attack_animation(speed: float = 1) -> void:
-	if animation_is_running:
-		await animation_finished
-	animation_is_running = true
-	awaited_signals[creature_with_overlay.sprite.animation_finished] = null;
-	creature_with_overlay.sprite.animation_finished.connect(func():
-		_on_sound_or_animation_finished(creature_with_overlay.sprite.animation_finished)
-		creature_with_overlay.sprite.play("idle"),
-		CONNECT_ONE_SHOT)
-	creature_with_overlay.sprite.play(attack_animations.pick_random(), speed)
-	if template.attack_sound != null:
-		await get_tree().create_timer(template.attack_sound_delay).timeout
-		MusicPlayer.play_sfx(template.attack_sound.sound)
-		awaited_signals[MusicPlayer.instance.sfx_finished] = null;
-		MusicPlayer.instance.sfx_finished.connect(_on_sound_or_animation_finished.bind(MusicPlayer.instance.sfx_finished),CONNECT_ONE_SHOT)
-
-var animation_is_running := false
-
-var awaited_signals:Dictionary = {}
-
-func _on_sound_or_animation_finished(s: Signal) -> void:
-	if not awaited_signals.has(s):
-		return
-	awaited_signals.erase(s)
-	if len(awaited_signals) == 0:
-		animation_is_running = false
-		animation_finished.emit(self)
 
 
 func get_attack_value() -> int:
