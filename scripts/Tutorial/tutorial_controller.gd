@@ -278,7 +278,6 @@ func show_step(next_step: NEXT_STEP_IS) -> void:
 				var card := Global.card_scene.instantiate() as CardController
 				card.card_data = Global.tutorial_card_datas[0]
 				add_card_to_hand(card)
-				enable_card.emit(card)
 			example_card.scale = Vector2(2,2)
 			await add_card_to_hand(example_card)
 		9: 
