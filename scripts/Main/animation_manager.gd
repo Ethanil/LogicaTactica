@@ -7,9 +7,13 @@ var awaited_signals: Array[Signal] = []
 
 var timeout_timer: SceneTreeTimer = null
 
+
+var animation_running:= false
+
 func on_animate_attack(attacker: CreatureInstance, attacked_creatures: Array[CreatureInstance], dead_creatures: Array[CreatureInstance]):
-	if len(awaited_signals) > 0:
+	if animation_running:
 		await all_animation_finished
+	animation_running = true
 	timeout_timer = get_tree().create_timer(3)
 	timeout_timer.timeout.connect(_cleanup_and_emit_animation_finished)
 	trigger_animation(attacker.creature_with_overlay.sprite, attacker.attack_animations, attacker.template.attack_sound, attacker.template.attack_sound_delay)
@@ -21,6 +25,7 @@ func on_animate_attack(attacker: CreatureInstance, attacked_creatures: Array[Cre
 func _cleanup_and_emit_animation_finished():
 	timeout_timer.timeout.disconnect(_cleanup_and_emit_animation_finished)
 	awaited_signals.clear()
+	animation_running = false
 	all_animation_finished.emit()
 
 func _on_animation_finished(s: Signal):
@@ -38,7 +43,8 @@ func trigger_animation(sprite: AnimatedSprite2D, animation_names: Array[String],
 		if chained_animation != "":
 			sprite.play(chained_animation),
 		CONNECT_ONE_SHOT)
-	sprite.play(animation_names.pick_random(), speed)
+	var animation = animation_names.pick_random()
+	sprite.play(animation, speed)
 	var original_color:= sprite.modulate
 	var tween = create_tween()
 	sprite.modulate = flashing_color

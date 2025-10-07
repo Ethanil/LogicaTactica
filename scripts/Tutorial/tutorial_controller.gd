@@ -384,7 +384,6 @@ func show_step(next_step: NEXT_STEP_IS) -> void:
 					start_fight_button.set_disabled(false)
 					update_tutorial(NEXT_STEP_IS.HIGHER)
 					battle_manager.combat_finished.connect(func(__r):
-						print("here")
 						update_tutorial(NEXT_STEP_IS.HIGHER)
 						, CONNECT_ONE_SHOT)
 					, CONNECT_ONE_SHOT)

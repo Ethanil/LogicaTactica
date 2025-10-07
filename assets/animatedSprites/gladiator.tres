@@ -158,6 +158,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_osd5s")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_osd5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr046")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_pr046")
 }],
 "loop": false,
