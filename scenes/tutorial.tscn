@@ -848,17 +848,6 @@ texture_normal = ExtResource("4_gbqnl")
 texture_hover = ExtResource("5_6yjpi")
 stretch_mode = 0
 
-[node name="Previous" type="TextureButton" parent="Highlight/14"]
-layout_mode = 0
-offset_left = -39.0
-offset_top = 31.0
-offset_right = 89.0
-offset_bottom = 159.0
-texture_normal = ExtResource("4_gbqnl")
-texture_hover = ExtResource("5_6yjpi")
-stretch_mode = 0
-flip_h = true
-
 [node name="NinePatchRect" type="NinePatchRect" parent="Highlight/14"]
 layout_mode = 0
 offset_left = 59.0
@@ -946,9 +935,9 @@ visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1588.0
-offset_top = 596.0
+offset_top = 538.0
 offset_right = 1628.0
-offset_bottom = 636.0
+offset_bottom = 578.0
 script = ExtResource("3_cq4me")
 metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
 
@@ -956,7 +945,7 @@ metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
 layout_mode = 0
 offset_left = 59.0
 offset_right = 972.0
-offset_bottom = 257.0
+offset_bottom = 340.0
 texture = ExtResource("4_cq4me")
 region_rect = Rect2(0, 0, 64, 64)
 patch_margin_left = 12
@@ -973,7 +962,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
-text = "Keine der Bedingungen deiner Hand sind erfüllt. Spiele jetzt eine davon als Kreatur aus."
+text = "Keine der Bedingungen deiner Hand sind erfüllt. Spiele trotzdem eine davon aus, um zu sehen was passiert."
 vertical_alignment = 1
 
 [node name="17" type="Control" parent="Highlight"]
@@ -1363,7 +1352,6 @@ text = "Jede Kreatur hat Eigenschaften, Lebenspunkte, Schaden und Verteidigung."
 vertical_alignment = 1
 
 [node name="24" type="Control" parent="Highlight"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1584.0
@@ -1399,13 +1387,12 @@ text = "Schaue dir die Kreaturen an und starte dann den Kampf indem du auf den \
 vertical_alignment = 1
 
 [node name="25" type="Control" parent="Highlight"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1577.0
-offset_top = 622.0
-offset_right = 1617.0
-offset_bottom = 662.0
+offset_left = 1584.0
+offset_top = 593.0
+offset_right = 1624.0
+offset_bottom = 633.0
 script = ExtResource("3_cq4me")
 metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
 
@@ -1414,7 +1401,7 @@ layout_mode = 0
 offset_left = 59.0
 offset_top = -71.0
 offset_right = 972.0
-offset_bottom = 261.0
+offset_bottom = 270.0
 texture = ExtResource("4_cq4me")
 region_rect = Rect2(0, 0, 64, 64)
 patch_margin_left = 12
@@ -2283,7 +2270,6 @@ vertical_alignment = 1
 [connection signal="button_down" from="Highlight/13/Next" to="TutorialController" method="_on_next_button_down"]
 [connection signal="button_down" from="Highlight/13/Previous" to="TutorialController" method="_on_previous_button_down"]
 [connection signal="button_down" from="Highlight/14/Next" to="TutorialController" method="_on_next_button_down"]
-[connection signal="button_down" from="Highlight/14/Previous" to="TutorialController" method="_on_previous_button_down"]
 [connection signal="button_down" from="Highlight/15/Next" to="TutorialController" method="_on_next_button_down"]
 [connection signal="button_down" from="Highlight/15/Previous" to="TutorialController" method="_on_previous_button_down"]
 [connection signal="button_down" from="Highlight/17/Next" to="TutorialController" method="_on_next_button_down"]
