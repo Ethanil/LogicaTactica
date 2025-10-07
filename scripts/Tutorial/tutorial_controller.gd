@@ -381,25 +381,12 @@ func show_step(next_step: NEXT_STEP_IS) -> void:
 			get_parent().mouse_filter = Control.MOUSE_FILTER_IGNORE
 			battle_manager.combat_finished.connect(
 				func(_r):
-					print("inner")
 					start_fight_button.set_disabled(false)
+					update_tutorial(NEXT_STEP_IS.HIGHER)
 					battle_manager.combat_finished.connect(func(__r):
-						hide_step(NEXT_STEP_IS.HIGHER)
-						current_state = 28
+						print("here")
 						update_tutorial(NEXT_STEP_IS.HIGHER)
 						, CONNECT_ONE_SHOT)
-					, CONNECT_ONE_SHOT)
-		28:
-			text_boxes[current_state].hide()
-			background_layer.hide()
-			background_layer2.hide()
-			get_parent().hide()
-			start_fight_button.set_disabled(false)
-			play_areas.hide()
-			battle_manager.combat_finished.connect(
-				func(_r):
-					start_fight_button.set_disabled(false)
-					battle_manager.combat_finished.connect(func(__r):update_tutorial(NEXT_STEP_IS.HIGHER), CONNECT_ONE_SHOT)
 					, CONNECT_ONE_SHOT)
 		31:
 			highlight(settings_button, 1)

@@ -366,6 +366,7 @@ offset_left = 86.0
 offset_top = 34.0
 offset_right = 206.0
 offset_bottom = 154.0
+focus_mode = 0
 theme_override_font_sizes/font_size = 30
 icon = ExtResource("13_1uw5o")
 flat = true
@@ -379,6 +380,7 @@ offset_left = 52.0
 offset_top = 1029.0
 offset_right = 188.0
 offset_bottom = 1165.0
+focus_mode = 0
 icon = ExtResource("7_0pyiw")
 flat = true
 
@@ -402,6 +404,7 @@ offset_left = 2405.0
 offset_top = 1015.0
 offset_right = 2541.0
 offset_bottom = 1151.0
+focus_mode = 0
 icon = ExtResource("6_vuu3o")
 flat = true
 
@@ -424,6 +427,7 @@ offset_left = 2392.0
 offset_top = 174.0
 offset_right = 2528.0
 offset_bottom = 310.0
+focus_mode = 0
 icon = ExtResource("14_auxaw")
 flat = true
 

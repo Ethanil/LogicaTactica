@@ -48,4 +48,3 @@ func trigger_animation(sprite: AnimatedSprite2D, animation_names: Array[String],
 		MusicPlayer.play_sfx(sound.sound)
 		awaited_signals.append(MusicPlayer.instance.sfx_finished);
 		MusicPlayer.instance.sfx_finished.connect(_on_animation_finished.bind(MusicPlayer.instance.sfx_finished),CONNECT_ONE_SHOT)
-	

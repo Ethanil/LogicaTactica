@@ -1520,33 +1520,12 @@ vertical_alignment = 1
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 724.0
-offset_top = 225.0
-offset_right = 764.0
-offset_bottom = 265.0
+offset_left = 1584.0
+offset_top = 622.0
+offset_right = 1624.0
+offset_bottom = 662.0
 script = ExtResource("3_cq4me")
 metadata/_custom_type_script = "uid://b7gk8ydhtdhh"
-
-[node name="Next" type="TextureButton" parent="Highlight/28"]
-layout_mode = 0
-offset_left = 943.0
-offset_top = 31.0
-offset_right = 1071.0
-offset_bottom = 159.0
-texture_normal = ExtResource("4_gbqnl")
-texture_hover = ExtResource("5_6yjpi")
-stretch_mode = 0
-
-[node name="Previous" type="TextureButton" parent="Highlight/28"]
-layout_mode = 0
-offset_left = -39.0
-offset_top = 31.0
-offset_right = 89.0
-offset_bottom = 159.0
-texture_normal = ExtResource("4_gbqnl")
-texture_hover = ExtResource("5_6yjpi")
-stretch_mode = 0
-flip_h = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Highlight/28"]
 layout_mode = 0
@@ -1570,7 +1549,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 56
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6yjpi")
-text = "empty"
+text = "Starte jetzt noch 1 Kampfrunde!"
 vertical_alignment = 1
 
 [node name="29" type="Control" parent="Highlight"]
@@ -2289,8 +2268,6 @@ vertical_alignment = 1
 [connection signal="button_down" from="Highlight/23/Previous" to="TutorialController" method="_on_previous_button_down"]
 [connection signal="button_down" from="Highlight/26/Next" to="TutorialController" method="_on_next_button_down"]
 [connection signal="button_down" from="Highlight/26/Previous" to="TutorialController" method="_on_previous_button_down"]
-[connection signal="button_down" from="Highlight/28/Next" to="TutorialController" method="_on_next_button_down"]
-[connection signal="button_down" from="Highlight/28/Previous" to="TutorialController" method="_on_previous_button_down"]
 [connection signal="button_down" from="Highlight/29/Next" to="TutorialController" method="_on_next_button_down"]
 [connection signal="button_down" from="Highlight/30/Next" to="TutorialController" method="_on_next_button_down"]
 [connection signal="button_down" from="Highlight/30/Previous" to="TutorialController" method="_on_previous_button_down"]

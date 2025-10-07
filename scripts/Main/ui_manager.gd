@@ -57,8 +57,11 @@ var creature_area_is_disabled := false
 #-----------------------------------------------------------------------------
 # CORE UI METHODS
 #-----------------------------------------------------------------------------
-
+var already_setup := false
 func setup() -> void:
+	if already_setup:
+		return
+	already_setup = true
 	draw_pile_button.pressed.connect(draw_pile_container.show)
 	draw_pile_close_button.pressed.connect(draw_pile_container.hide)
 	discard_pile_button.pressed.connect(discard_pile_container.show)
