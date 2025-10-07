@@ -1352,6 +1352,7 @@ text = "Jede Kreatur hat Eigenschaften, Lebenspunkte, Schaden und Verteidigung."
 vertical_alignment = 1
 
 [node name="24" type="Control" parent="Highlight"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1584.0
@@ -1387,6 +1388,7 @@ text = "Schaue dir die Kreaturen an und starte dann den Kampf indem du auf den \
 vertical_alignment = 1
 
 [node name="25" type="Control" parent="Highlight"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1584.0
