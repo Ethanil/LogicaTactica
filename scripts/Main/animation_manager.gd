@@ -39,9 +39,9 @@ func _on_animation_finished(s: Signal):
 func trigger_animation(sprite: AnimatedSprite2D, animation_names: Array[String], sound: AudioAssetWithMetadata = null, sound_delay :float= 0, flashing_color: Color = Color.WHITE, chained_animation := "idle", speed: float = 1):
 	awaited_signals.append(sprite.animation_finished);
 	sprite.animation_finished.connect(func():
-		_on_animation_finished(sprite.animation_finished)
 		if chained_animation != "":
-			sprite.play(chained_animation),
+			sprite.play(chained_animation)
+		_on_animation_finished(sprite.animation_finished),
 		CONNECT_ONE_SHOT)
 	var animation = animation_names.pick_random()
 	sprite.play(animation, speed)
